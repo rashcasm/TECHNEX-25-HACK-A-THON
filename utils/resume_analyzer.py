@@ -268,7 +268,7 @@ class ResumeAnalyzer:
             'projects', 'personal projects', 'academic projects', 'key projects',
             'major projects', 'professional projects', 'project experience',
             'relevant projects', 'featured projects','latest projects',
-            'top projects'
+            'top projects', 'research project'
         ]
         in_project_section = False
         current_entry = []
@@ -532,7 +532,7 @@ class ResumeAnalyzer:
         
         # Calculate section-specific scores
         contact_score = 100 - (len(contact_suggestions) * 25)  # -25 for each missing item
-        summary_score = 100 - (len(summary_suggestions) * 33)  # -33 for each issue
+        summary_score = 100 - (len(summary_suggestions) * 25)  # -33 for each issue
         skills_score = keyword_match['score']
         experience_score = 100 - (len(experience_suggestions) * 25)
         education_score = 100 - (len(education_suggestions) * 25)
